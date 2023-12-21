@@ -1,10 +1,14 @@
+using Microsoft.EntityFrameworkCore;
 using PANCWA_REPOSITORY_PATTERN_READY_1.Services.MachinesService;
+using TheBoxApp.Data.Context;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 builder.Services.AddScoped<IMachinesService, MachinesService>();
+builder.Services.AddDbContext<MachineDataContext>(
+    options => options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 var app = builder.Build();
 

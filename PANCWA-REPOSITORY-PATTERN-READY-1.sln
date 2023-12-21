@@ -5,6 +5,8 @@ VisualStudioVersion = 17.8.34322.80
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PANCWA-REPOSITORY-PATTERN-READY-1", "PANCWA-REPOSITORY-PATTERN-READY-1\PANCWA-REPOSITORY-PATTERN-READY-1.csproj", "{D6A439F9-96E3-4140-BD37-361EFD4368A4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheBoxApp.Data", "TheBoxApp.Data\TheBoxApp.Data.csproj", "{5FFBAE4D-5B3B-4798-A5F3-A664F39F4F00}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{D6A439F9-96E3-4140-BD37-361EFD4368A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D6A439F9-96E3-4140-BD37-361EFD4368A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D6A439F9-96E3-4140-BD37-361EFD4368A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5FFBAE4D-5B3B-4798-A5F3-A664F39F4F00}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5FFBAE4D-5B3B-4798-A5F3-A664F39F4F00}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5FFBAE4D-5B3B-4798-A5F3-A664F39F4F00}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5FFBAE4D-5B3B-4798-A5F3-A664F39F4F00}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
