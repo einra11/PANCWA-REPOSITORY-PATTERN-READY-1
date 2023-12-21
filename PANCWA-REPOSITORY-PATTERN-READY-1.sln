@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34322.80
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PANCWA-REPOSITORY-PATTERN-READY-1", "PANCWA-REPOSITORY-PATTERN-READY-1\PANCWA-REPOSITORY-PATTERN-READY-1.csproj", "{D6A439F9-96E3-4140-BD37-361EFD4368A4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D6A439F9-96E3-4140-BD37-361EFD4368A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6A439F9-96E3-4140-BD37-361EFD4368A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6A439F9-96E3-4140-BD37-361EFD4368A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6A439F9-96E3-4140-BD37-361EFD4368A4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3D7E762A-ECE7-4C15-BEA6-F982D8768A4D}
+	EndGlobalSection
+EndGlobal
