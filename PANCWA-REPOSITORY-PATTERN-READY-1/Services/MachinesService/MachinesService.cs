@@ -1,48 +1,49 @@
-﻿using PANCWA_REPOSITORY_PATTERN_READY_1.Models;
+﻿using Microsoft.EntityFrameworkCore;
+using PANCWA_REPOSITORY_PATTERN_READY_1.Models;
 using System.Data;
+using TheBoxApp.Data.Context;
 
 namespace PANCWA_REPOSITORY_PATTERN_READY_1.Services.MachinesService
 {
     public class MachinesService : IMachinesService
     {
-
+        private readonly MachineDataContext context;
+        public MachinesService(MachineDataContext context)
+        {
+            this.context = context;
+        }
         private void DisposeMachine(int id)
         {
             throw new NotImplementedException();
         }
 
-        private void RegisterToPrometheus(Machine machine, IDataAdapter properties)
+        private void RegisterToPrometheus(MachineViewModel machine, IDataAdapter properties)
         {
             throw new NotImplementedException();
         }
 
-        public IEnumerable<Machine> Get()
+        public IEnumerable<MachineViewModel> Get()
         {
-            return Enumerable.Range(1, 5).Select(index => new Machine
+            var machines = this.context.Machines.Select(m => new MachineViewModel
             {
-                Id = index,
-                Name = "Machine " + index,
-                Description = "Description " + index,
-                Ip = "192.168.0." + index,
-                Mac = "00:00:00:00:00:0" + index,
-                Type = "Type " + index,
-                Location = "Location " + index,
-                Status = "Status " + index,
-            })
-            .ToArray();
+                Name = m.Name,
+                Ip = m.Ip,
+            });
+
+            return machines;
         }
 
-        public IDataAdapter Insert(Machine machine)
+        public IDataAdapter Insert(MachineViewModel machine)
         {
             throw new NotImplementedException();
         }
 
-        public IDataAdapter Update(Machine machine)
+        public IDataAdapter Update(MachineViewModel machine)
         {
             throw new NotImplementedException();
         }
 
-        public IDataAdapter Delete(Machine machine)
+        public IDataAdapter Delete(MachineViewModel machine)
         {
             throw new NotImplementedException();
         }

@@ -1,11 +1,10 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace PANCWA_REPOSITORY_PATTERN_READY_1.Models
 {
-   public class Machine
+   public class MachineViewModel
     {
-      [Required]
-      public int Id { get; set; }
       [Required]
       public string? Name { get; set; }
       public string? Ip { get; set; }
@@ -45,5 +44,12 @@ namespace PANCWA_REPOSITORY_PATTERN_READY_1.Models
       public string? OsLicenseVendorSupportVendorSupportExpStatus { get; set; }
       public string? OsLicenseVendorSupportVendorSupportType { get; set; }
       public string? OsLicenseVendorSupportVendorSupport { get; set; }
+    }
+
+
+    public class MachineDashBoardPropertiesViewModel
+    {
+        [Column(TypeName = "jsonb")]
+        public string? context { get; set; }
     }
 }

@@ -1,11 +1,21 @@
-﻿@{
+﻿@model IEnumerable<MachineViewModel>
+@{
     ViewData["Title"] = "Machines";
 }
+
 
 <html>
     <body>
         <div class="contianer">
             <h1>Hello World Welcome to machine page</h1>
+            <h2>Machine List</h2>
+        @foreach(var machines in Model)
+        {
+                <div>
+                    <p>Machine Name: @machines.Name</p>
+                    <p>Machine Ip Address: @machines.Ip</p>
+                </div>
+        }
         </div>
     </body>
 </html>
