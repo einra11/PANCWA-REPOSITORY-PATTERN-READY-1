@@ -27,7 +27,40 @@ namespace PANCWA_REPOSITORY_PATTERN_READY_1.Controllers
         {
             _logger.LogInformation("MachineRoute");
             var machines = _machinesService.Get();
+
             return View(machines);
+        }
+
+        [HttpGet(Name = "NewMachine")]
+        public IActionResult NewMachine(MachineViewModel? machine)
+        {
+            _logger.LogInformation("MachineRoute");
+            return View();
+        }
+
+        public IEnumerable<MachineViewModel> Post([FromBody] MachineViewModel machine)
+        {
+            _logger.LogInformation("MachineRoute");
+            var machines = _machinesService.Insert(machine);
+            throw new NotImplementedException();
+        }
+
+        [HttpPost]
+        public IActionResult Insert(MachineViewModel machine)
+        {
+            _logger.LogInformation("MachineRoute");
+            if (ModelState.IsValid)
+            {
+                bool insertMachine = _machinesService.Insert(machine);
+
+                if (!insertMachine)
+                {
+                    return View("NewMachine", machine);
+                }
+
+                return RedirectToAction(nameof(Index));
+            }
+            return View("NewMachine", machine);
         }
     }
 }

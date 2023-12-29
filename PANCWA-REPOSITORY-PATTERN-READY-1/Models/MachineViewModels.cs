@@ -5,9 +5,11 @@ namespace PANCWA_REPOSITORY_PATTERN_READY_1.Models
 {
    public class MachineViewModel
     {
-      [Required]
-      public string? Name { get; set; }
-      public string? Ip { get; set; }
+      [Required(ErrorMessage = "Enter the name.")]
+      public required string Name { get; set; }
+      [Required(ErrorMessage = "Enter the IP address.")]
+      [IpAddress]
+      public required string Ip { get; set; }
       public string? Mac { get; set; }
       public string? Description { get; set; }
       public string? Location { get; set; }

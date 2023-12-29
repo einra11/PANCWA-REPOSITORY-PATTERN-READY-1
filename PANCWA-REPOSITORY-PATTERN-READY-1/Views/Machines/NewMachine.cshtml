@@ -1,0 +1,37 @@
+﻿@model MachineViewModel
+@{
+    ViewData["Title"] = "New Machine";
+}
+
+<html>
+    <body>
+        <div class="container">
+            <h1>New Machine</h1>
+        <form method="post" asp-controller="machines" asp-action="Insert">
+                <div class="row mb-3">
+                    <div class="col-2">
+                        <label asp-for="Name" class="col-form-label"></label>
+                    </div>
+                    <div class="col-6">
+                        <input asp-for="Name" class="form-control" />
+                        <span asp-validation-for="Name" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-2">
+                        <label asp-for="Ip" class="col-form-label"></label>
+                    </div>
+                    <div class="col-6">
+                        <input asp-for="Ip" class="form-control" />
+                        <span asp-validation-for="Ip" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-2">
+                        <input type="submit" value="Save" class="btn btn-primary" />
+                    </div>
+                 </div>
+            </form>
+        </div>
+    </body>
+</html>
